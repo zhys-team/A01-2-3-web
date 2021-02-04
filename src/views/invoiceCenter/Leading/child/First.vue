@@ -1,0 +1,113 @@
+<template>
+  <div>
+      <el-table
+    :data="invoiceOriginalLines"
+    style="width: 100%;  "
+    height="450"
+    size="small"
+    border>
+    <el-table-column
+      fixed
+      prop="docLine"
+      label="行号"
+      width="50">
+    </el-table-column>
+    <el-table-column
+      prop="docOrignum"
+      label="源单据编号"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      prop="docOrigline"
+      label="源单据行号"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      prop="itemNum"
+      label="物料编号"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      prop="itemName"
+      label="物料名称"
+      width="300">
+    </el-table-column>
+    <el-table-column
+      prop="itemSpec"
+      label="物料规格"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      prop="unitName"
+      label="计量单位名称"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      prop="taxCatecode"
+      label="税收分类编码"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      prop="quantity"
+      label="数量"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      prop="taxRate"
+      label="税率"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      prop="giftFlag"
+      label="是否赠品行"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      prop="zamountWsj"
+      label="不含税净金额（净值）"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      prop="zamountSej"
+      label="净税额（净值）"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      prop="zpriceHsj"
+      label="含税净单价"
+      width="120">
+    </el-table-column>
+    <el-table-column
+      prop="zpriceWsj"
+      label="不含税净单价"
+      width="120">
+    </el-table-column>
+  </el-table>
+  </div>
+</template>
+
+<script>
+ export default {
+    data() {
+      return {
+      }
+    },
+    computed:{
+        invoiceOriginalLines(){
+          if(this.$store.state.invoiceHead){
+            return this.$store.state.invoiceHead.invoiceOriginalLines
+          }else{
+            return null;
+          }
+        }
+    },
+    created(){
+    }
+  }
+</script>
+
+<style scoped>
+*{
+  transition: all 0.5s !important;
+}
+</style>
