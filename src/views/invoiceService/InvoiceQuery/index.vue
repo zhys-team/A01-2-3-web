@@ -148,7 +148,7 @@
             </el-table-column>
 
             <el-table-column
-              prop="invoiceType"
+              prop="groupStatus"
               label="发票状态"
               align="center"
               width="120"

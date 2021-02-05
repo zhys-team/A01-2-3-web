@@ -2,6 +2,13 @@
   <div>
     <div class="block" style="padding-top: 20px">
       <el-timeline>
+        <el-timeline-item timestamp="2020/2/05" placement="top">
+          <el-card>
+            <p>|-github团队协作流程文档编写和测试------[张琪]</p>
+            <p>|-差异报告的实现 </p>
+            <p>|-开票汇总的实现 ，开票汇总接口文档编写。</p>
+          </el-card>
+        </el-timeline-item>
         <el-timeline-item timestamp="2020/2/04" placement="top">
           <el-card>
             <p>

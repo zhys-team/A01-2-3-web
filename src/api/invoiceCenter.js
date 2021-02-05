@@ -16,6 +16,18 @@ let getInvoiceList = (data) => {
       handelErroer(error, url)
     })
 }
+let getInvoiceSummary = (data) => {
+  let url = base + '/invoiceView/getInvoiceSummary'
+  return axios
+    .post(url, data, {
+      headers: {
+        'Content-Type': 'application/json;charset=UTF-8',
+      },
+    })
+    .catch((error) => {
+      handelErroer(error, url)
+    })
+}
 
 let handelErroer = (error, url) => {
   if (error.response) {
@@ -39,4 +51,4 @@ let handelErroer = (error, url) => {
   console.log(error.config)
 }
 
-export { getInvoiceList }
+export { getInvoiceList, getInvoiceSummary }

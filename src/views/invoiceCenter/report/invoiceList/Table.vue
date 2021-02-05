@@ -22,6 +22,12 @@
       </el-table-column>
 
       <el-table-column
+        prop="goldtaxCode"
+        label="发票代码"
+        width="100"
+      ></el-table-column>
+
+      <el-table-column
         prop="invoiceType"
         label="发票类型"
         align="center"
